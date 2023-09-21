@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -44,6 +45,10 @@ return [
             'driver' => 'session',
             'provider' => 'customers',
         ],
+        'api' => [
+            'driver' => 'jwt',
+            'provider' => 'customers',
+        ],
     ],
 
     /*
@@ -73,6 +78,7 @@ return [
         'customers' => [
             'driver' => 'eloquent',
             'model' => App\Models\Customer::class,
+
     
         ],
 

@@ -19,14 +19,14 @@ return new class extends Migration
             $table->string('password');
             $table->text('address')->nullable();
             $table->string('image')->nullable();
-            $table->string('otp')->nullable();
-            $table->dateTime('otp_expire_at')->nullable();
-            $table->boolean('is_email_verified')->nullable();
-            $table->boolean('is_mobile_verified')->nullable();
-            $table->string('status')->default('active');
-            $table->string('device_token')->nullable();
+            // $table->string('otp')->nullable();
+            // $table->dateTime('otp_expire_at')->nullable();
+            // $table->boolean('is_email_verified')->nullable();
+            // $table->boolean('is_mobile_verified')->nullable();
+            // $table->string('status')->default('active');
+            // $table->string('device_token')->nullable();
             $table->timestamps();
-            $table->softDeletes();
+            // $table->softDeletes();
         });
     }
 
