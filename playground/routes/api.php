@@ -24,6 +24,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/registration', [CustomerController::class, 'registration']);
 Route::post('/login', [CustomerController::class, 'login']);
-Route::get('/logout', [CustomerController::class, 'logout']);
 
+Route::group(['middleware'=>'auth:api'], function(){
+    Route::get('/logout', [CustomerController::class, 'logout']);
+});
+
+
+
+Route::get('/index',[CustomerController::class, 'index']);
+Route::get('/single/{id}',[CustomerController::class, 'single']);
 
