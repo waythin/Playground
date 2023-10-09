@@ -3,7 +3,6 @@
 use App\Http\Controllers\backend\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\CustomerController;
-use App\Http\Controllers\backend\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,20 +15,9 @@ use App\Http\Controllers\backend\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome')->name('welcome');
+Route::get('/', function(){
+    $a = 10;
+    $b =10;
+    $c = ($a+ $b);
+    echo $c;
 });
-
-Route::get('');
-//login
-
-Route::get('/login', [AuthController::class, 'loginPage'])->name('login');
-Route::post('/login', [AuthController::class, 'loginPost'])->name('loginPost');
-
-
-Route::get('/registration', [CustomerController::class, 'create'])->name('registration');
-
-Route::resource('customer', CustomerController::class);
-
-
-Route::get('/',[HomeController::class, 'layout']);

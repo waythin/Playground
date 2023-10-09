@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>master</title>
+    <title>Master</title>
 </head>
-
-
-
 <body>
-    <h1> hi bro</h1>
-   
+    @yield('header')
+
+    @yield('sidebar')
+
     @yield('content')
-    <h1>
-        dope
-    </h1>
-    
+
+    @yield('footer')
 </body>
 </html>
